@@ -1,0 +1,28 @@
+{
+    "news":[
+        {
+            "title": "Simons Geburt1 ",
+            "date": "01-02-1999  ",
+            "shortText": "Simon wurde geboren  ",
+            "longText": "Simon wurde geboren....lang  "
+        },
+        {
+            "title": "Simons Geburt2  ",
+            "date": "01-02-1999  ",
+            "shortText": "Simon wurde geboren  ",
+            "longText": "Simon wurde geboren....lang  "
+        },
+        {
+            "title": "Simons Geburt3  ",
+            "date": "01-02-1999  ",
+            "shortText": "Simon wurde geboren  ",
+            "longText": "Simon wurde geboren....lang  "
+        },
+        {
+            "title": "Simons Geburt4  ",
+            "date": "01-02-1999  ",
+            "shortText": "Simon wurde geboren  ",
+            "longText": "Simon wurde geboren....lang  "
+        }
+    ]
+}

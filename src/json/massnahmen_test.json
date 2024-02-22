@@ -1,0 +1,15 @@
+{
+    "Kategorie": [
+        "Wärmenetz, Solarthermie",  "Wärmepumpe", "Wärmespeicher"
+    ],
+    "Fördermittelnehmer":[
+        "Unternehmen"
+    ],
+    "Förderung": "Bundesförderung für effiziente Wärmenetze (BEW)",
+    "Förderhöhe": "50 % der förderfähigen Kosten ",
+    "Fördergegenstand": "Modul 1: Transformationskonzept/Machbarkeitsstudie ",
+    "Fördervorraussetzung": "mehr als 16 Gebäude oder 100 Wohneinheiten im Netz",
+    "Fördergeber": "BAFA",
+    "Link Extern": "https://www.bafa.de/DE/Energie/Energieeffizienz/Waermenetze/Effiziente_Waermenetze/effiziente_waermenetze_node.html",
+    "Link Intern": ""
+}
