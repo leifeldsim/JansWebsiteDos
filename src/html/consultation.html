@@ -10,14 +10,12 @@
 </head>
 <body>
     <!--Navigation bar-->
-    <div id="nav-placeholder">
-    </div>
-
+    <div id="nav-placeholder"></div>
     <script>
-    $(function(){
-    $("#nav-placeholder").load("nav.html");
-    });
-    </script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
     <!--end of Navigation bar-->
 
     <div>
@@ -45,15 +43,19 @@
         <div><h2>Mögliche Fördermaßnahmen</h2> <br>
             <table id="table_consultation">
                 <tr>
-                  <th>Fördermaßnahmen</th>
-                  <th>Name</th>
-                  <th>Info</th>
+                  <th>Kategorien</th>
+                  <th>Förderung</th>
+                  <th>Förderhöhe</th>
+                  <th>Fördergegenstand</th>
+                  <th>Fördervorraussetzung</th>
                   <th>Fördergeber</th>
+                  <th>Weitere Informationen</th>
                 </tr>
               </table>
         </div>
     </section>
 
     <script src="../src_for_real/consultation.js"></script>
+    <script src="../src_for_real/data_operations.js"></script>
 </body>
 </html>

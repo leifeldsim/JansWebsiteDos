@@ -1,9 +1,4 @@
 <header>
-    <ul>
-        <li><a href="consultation.html" id="navbar_subsidies_consultation"></a></li>
-        <li><a href="overview.html" id="navbar_subsidies_overview"></a></li>
-        <li><a href="news.html" id="navbar_news"></a></li>
-    </ul> 
     <style>
         ul {
             list-style-type: none;
@@ -17,8 +12,8 @@
             float: left;
         }
 
-        li a {
-            display: block;
+        li a, .dropbtn {
+            display: inline-block;
             color: white;
             text-align: center;
             padding: 14px 16px;
@@ -26,15 +21,67 @@
         }
 
             /* Change the link color to #111 (black) on hover */
-        li a:hover {
-            background-color: #111;
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content ul li:hover ul {
+            display: block;
+            visibility: visible;
         }
     </style>
+    <ul>
+        <li><a href="consultation.html" id="navbar_subsidies_consultation"></a></li>
+        <li><a href="news.html" id="navbar_news"></a></li>
+        <li class="dropdown">
+            <a href="overview.html" class="dropbtn">TEST1</a>
+            <div class="dropdown-content">
+                <a href="overview.html">Test1_1</a>
+                <a href="overview.html">Test1_2</a>
+                <a href="overview.html">Test1_3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="overview.html" class="dropbtn">TEST2</a>
+            <div class="dropdown-content">
+                <a href="overview.html">Test2_1</a>
+                <a href="overview.html">Test2_2</a>
+                <a href="overview.html">Test2_3</a>
+            </div>
+        </li>
+    </ul> 
 </header>
 <script>
     /*document.getElementById("navbar_subsidies").innerHTML = "Förderung";*/
     document.getElementById("navbar_subsidies_consultation").innerHTML = "Beratung";
-    document.getElementById("navbar_subsidies_overview").innerHTML = "Übersicht";
+    /*document.getElementById("navbar_subsidies_overview").innerHTML = "Übersicht";*/
     document.getElementById("navbar_news").innerHTML = "News";
     /*document.getElementById("navbar_search_btn").innerHTML = "Search";
     document.getElementById("navbar_search_input").innerHTML = "Search";*/

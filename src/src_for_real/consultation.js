@@ -1,6 +1,7 @@
 const CUSTOMER_TYPE = {
     PRIVATE: "Privat",
-    COMPANY: "Unternehmen"
+    COMPANY: "Unternehmen",
+    NOT_DEFINED: "Keine Angabe"
 };
 
 const MASSNAHMEN_ART = {
@@ -12,6 +13,7 @@ const MASSNAHMEN_ART = {
 //------------------------------------------------
 //Build Website and set Default Values
 this.constList = [];
+this.customerType = CUSTOMER_TYPE.COMPANY;
 
 setDefaultValues();
 
@@ -53,21 +55,21 @@ function addCheckboxes(massnahme, index){
 
 function getCheckedCategories(){
     let checkedMassnahmen = []
-    let cb_div = document.getElementById(cb_massnahmen_typ_gebaeude);
+    let cb_div = document.getElementById("cb_massnahmen_typ_gebaeude");
     for(let i = 1; i < cb_div.childElementCount; i++){
         if(cb_div.children[i].childNodes[0].checked){
             let checkboxId = cb_div.children[i].childNodes[0].name.substring(CHECKBOX_ID_PREFIX.length)
             checkedMassnahmen.push(parseInt(checkboxId));
         }
     }
-    let cb_div = document.getElementById(cb_massnahmen_typ_aussenbereich);
+    cb_div = document.getElementById("cb_massnahmen_typ_aussenbereich");
     for(let i = 1; i < cb_div.childElementCount; i++){
         if(cb_div.children[i].childNodes[0].checked){
             let checkboxId = cb_div.children[i].childNodes[0].name.substring(CHECKBOX_ID_PREFIX.length)
             checkedMassnahmen.push(parseInt(checkboxId));
         }
     }
-    let cb_div = document.getElementById(cb_massnahmen_typ_sonstige);
+    cb_div = document.getElementById("cb_massnahmen_typ_sonstige");
     for(let i = 1; i < cb_div.childElementCount; i++){
         if(cb_div.children[i].childNodes[0].checked){
             let checkboxId = cb_div.children[i].childNodes[0].name.substring(CHECKBOX_ID_PREFIX.length)
@@ -79,56 +81,88 @@ function getCheckedCategories(){
 
 function submitConsultation(){
     let checkedMassnahmen = getCheckedCategories();        
-    
-    console.log(checkedMassnahmen);
+    checkedMassnahmen.sort(function(a, b){return a - b}); 
 
-    let m = new Massnahmen(checkedMassnahmen);
+    let private_cb = document.getElementById('customertype_private');
+    let company_cb = document.getElementById('customertype_company');
+
+    if(private_cb.checked){
+        this.customerType = CUSTOMER_TYPE.PRIVATE;
+    }else if(company_cb.checked){
+        this.customerType = CUSTOMER_TYPE.COMPANY;
+    }else{
+        this.customerType = CUSTOMER_TYPE.NOT_DEFINED
+    }
+
+    let m = new Massnahmen(checkedMassnahmen, customerType);
 
     fetch('../json/massnahmen.json')
     .then(response => response.json())
     .then(data => processInput(data, m))
 }
 
-//TODO nicht nur != abfragen, gibt auch andere Fälle
+function checkCategorieIds(jsonIds, checkedIds) {
+    for (let i = 0; i < jsonIds.length; i++) {
+        if(checkedIds.includes(jsonIds[i])){ //checkedIds[i] != jsonIds[i]
+            return true;
+        }
+    }
+    return false;
+}
+
+function checkFoerdermittelnehmer(foerdermittelnehmer){
+    return foerdermittelnehmer.includes(this.customerType);
+}
+
 function getMassnahmen(jsondata, m){
     var correspondingMassnahmen = [];
     for (let i = 0; i < Object.keys(jsondata).length; i++) {
         let element = jsondata[i];
-        //TODO Hier Kategorien vergleichen!!!
-        /*for (let massnahmen_index = 0; massnahmen_index < element.massnahmen.length; massnahmen_index++) {
-            if(element.massnahmen[massnahmen_index][1] != m.values[massnahmen_index][1]){
-                break;
-            }
-            if(massnahmen_index == (element.massnahmen.length-1)){
-                let fm = new FoerderMassnahme(element.name, m, element.info, element.foerdergeber);
-                correspondingMassnahmen.push(fm);
-            }
-        }*/
+        if(!checkFoerdermittelnehmer(element.Fördermittelnehmer)){
+            continue;
+        }
+        let isSameCategorie = checkCategorieIds(element.KategorieIds, m.values);
+        //console.log("json values: " + element.KategorieIds + " checked value: " + m.values + " -> Result: " + (isSameCategorie))
+        if(isSameCategorie){
+            correspondingMassnahmen.push(element);
+        }
     }
     return correspondingMassnahmen;
-}
-
-function clearTable(table){
-    var tableHeaderRowCount = 1;
-    var rowCount = table.rows.length;
-    for (var i = tableHeaderRowCount; i < rowCount; i++) {
-        table.deleteRow(tableHeaderRowCount);
-    }
 }
 
 function populateConsultationTable(massnahmen){
     let table = document.getElementById("table_consultation");
     clearTable(table);
+    if(massnahmen.length == 0){
+        let row = table.insertRow();
+        let no_massnahmen_found = row.insertCell();
+        no_massnahmen_found.innerHTML = "Keine Fördermaßnahmen gefunden!";
+        return;
+    }
     massnahmen.forEach(item => {
         let row = table.insertRow();
-        let massnahmen = row.insertCell(0);
-        massnahmen.innerHTML = getMassnahmenAsString(item);
-        let name = row.insertCell(1);
-        name.innerHTML = item.name;
-        let info = row.insertCell(2);
-        info.innerHTML = item.info;
-        let foerdergeber = row.insertCell(3);
-        foerdergeber.innerHTML = item.foerdergeber;
+        
+        let category = row.insertCell(0);
+        category.innerHTML = item.Kategorie;
+        
+        let foerderung = row.insertCell(1);
+        foerderung.innerHTML = item.Förderung;
+        
+        let foerderhoehe = row.insertCell(2);
+        foerderhoehe.innerHTML = item.Förderhöhe;
+        
+        let foerdergegenstand = row.insertCell(3);
+        foerdergegenstand.innerHTML = item.Fördergegenstand;
+
+        let foerdervorraussetzungen = row.insertCell(4);
+        foerdervorraussetzungen.innerHTML = item.Fördervoraussetzung;
+
+        let foerdergeber = row.insertCell(5);
+        foerdergeber.innerHTML = item.Fördergeber;
+
+        let link = row.insertCell(6);
+        link.appendChild(createLinkHTMLElement(item.Link));
+    
     });
 }
 
@@ -161,9 +195,9 @@ class FoerderMassnahme { //cringe deutsch
 }
 
 class Massnahmen{ 
-    //value format: (Name, Value, ID)
-    constructor(values){
+    constructor(values, customerType){
         this.values = values;
+        this.customerType = customerType;
     }
 }
 

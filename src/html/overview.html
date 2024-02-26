@@ -10,15 +10,12 @@
 </head>
 <body>
     <!--Navigation bar-->
-    <div id="nav-placeholder">
-
-    </div>
-
+    <div id="nav-placeholder"></div>
     <script>
-    $(function(){
-    $("#nav-placeholder").load("nav.html");
-    });
-    </script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
     <!--end of Navigation bar-->
 
     <h1>Übersicht</h1>
@@ -36,7 +33,6 @@
     </div>
     
     <script src="../src_for_real/overview.js"></script>
-    <script src="../src_for_real/consultation.js"></script>
-
+    <script src="../src_for_real/data_operations.js"></script>
 </body>
 </html>

@@ -92,7 +92,7 @@
         "Fördertopf": "EU-Beihilfe",
         "Kumulierung": "Kumulierung mit KWKG und BEW möglich",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-energieeffizienten-nahwaerme-und-nahkaeltenetzen",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [1, 2, 3, 4]
     },
     {
@@ -108,7 +108,7 @@
         "Fördertopf": "EU-Beihilfe",
         "Kumulierung": "Kumulierungsverbot für staatliche Förderprogramme",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-waerme-und-kaeltenetzen-zuwendungen-ab-100000-eur",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [1, 2, 3, 4]
     },
     {
@@ -124,7 +124,7 @@
         "Fördertopf": "De-minimis",
         "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Energieberatung/Nichtwohngebaeude_Anlagen_Systeme/Modul1_Energieaudit/modul1_energieaudit_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [5]
     },
     {
@@ -140,7 +140,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung mit BEW/BEG/EEG ausgeschlossen",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul1_Querschnittstechnologien/modul1_querschnittstechnologien_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [6, 7, 8, 9, 10, 11, 12]
     },
     {
@@ -156,7 +156,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung mit BEW/BEG/EEG ausgeschlossen",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul2_Prozesswaerme/modul2_prozesswaerme_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [1, 13, 14, 15, 16]
     },
     {
@@ -172,7 +172,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung mit BEW/BEG/EEG ausgeschlossen",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul3_Energiemanagementsysteme/modul3_energiemanagementsysteme_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [17, 18]
     },
     {
@@ -188,7 +188,7 @@
         "Fördertopf": "De-minimis/AGVO",
         "Kumulierung": "Kumulierung mit BEW/BEG/EEG ausgeschlossen",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul4_Energiebezogene_Optimierung/modul4_energiebezogene_optimierung_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [19]
     },
     {
@@ -204,7 +204,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung mit BEW/BEG/EEG ausgeschlossen",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul5_Transformationskonzepte/modul5_transformationskonzepte_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [20]
     },
     {
@@ -220,7 +220,7 @@
         "Fördertopf": "De-minimis/AGVO",
         "Kumulierung": "Kumulierung mit BEW/BEG/EEG ausgeschlossen",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul6_Elektrifizierungsmassnahmen_KU/modul6_elektrifizierungsmassnahmen_ku_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [21, 22, 23]
     },
     {
@@ -236,7 +236,7 @@
         "Fördertopf": "De-minimis/AGVO",
         "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Energieeffizienz/Klima_Kaeltetechnik/klima_kaeltetechnik_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [25, 26]
     },
     {
@@ -252,7 +252,7 @@
         "Fördertopf": "De-minimis/AGVO",
         "Kumulierung": "Kumulierungsverbot",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [27]
     },
     {
@@ -268,7 +268,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [27]
     },
     {
@@ -284,7 +284,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [27]
     },
     {
@@ -300,7 +300,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [27]
     },
     {
@@ -316,7 +316,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [27]
     },
     {
@@ -332,7 +332,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [27]
     },
     {
@@ -348,7 +348,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [28]
     },
     {
@@ -364,7 +364,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/lademoeglichkeiten/foerderung-von-netzanschluessen-fuer-garagen-und-stellplatzkomplexe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [28]
     },
     {
@@ -380,7 +380,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-waermekonzepten",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [29]
     },
     {
@@ -396,7 +396,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-waerme-und-kaeltespeichern",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [4]
     },
     {
@@ -412,7 +412,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-gewerblichen-anlagen-zur-verwertung-von-abwaerme",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [23]
     },
     {
@@ -421,14 +421,14 @@
         "Förderung": "Förderung von Wärmepumpen in Verbindung mit einem kalten Wärmenetz",
         "Förderhöhe": "25 % der förderfähigen Kosten maximal 1.500 € pro Anlage",
         "Fördergegenstand": "Wärmepumpen sowie die auf einem Grundstück notwendigen Arbeiten für den kundenseitigen Anschluss an ein kaltes Wärmenetz.",
-        "Fördervoraussetzung": "",
+        "Fördervoraussetzung": "-",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "Progress NRW",
         "Auslaufdatum": "7/1/2024",
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-waermepumpen-verbindung-mit-einem-kalten-waermenetz",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [1, 24]
     },
     {
@@ -444,7 +444,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-waermeuebergabestationen",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [30]
     },
     {
@@ -460,7 +460,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-druckerhoehungsanlagen-zur-trinkwasserversorgung",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [31, 32]
     },
     {
@@ -476,7 +476,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-lueftungsanlagen-mit-waermerueckgewinnung",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [33, 34]
     },
     {
@@ -492,7 +492,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-steuereinrichtungen-fuer-den-betrieb-von-waermepumpen-verbindung-mit-einer",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [1, 35]
     },
     {
@@ -500,7 +500,7 @@
         "Fördermittelnehmer": "Unternehmen , Privat",
         "Förderung": "Förderung von Austausch bestehender elektrischer Speicherheizungen in Verbindung mit der Installation einer Erneuerbaren-Energien-Heizungsanlage",
         "Förderhöhe": "100 € je Einzelgerät, maximal 5.000€ pro Gebäude",
-        "Fördergegenstand": "",
+        "Fördergegenstand": "-",
         "Fördervoraussetzung": "Fachgerechte Entsorgung",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "Progress NRW",
@@ -508,7 +508,7 @@
         "Fördertopf": "De-minimis",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-austausch-bestehender-elektrischer-speicherheizungen-verbindung-mit-der-installation",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [36, 1, 2]
     },
     {
@@ -524,7 +524,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-biomasseanlagen-verbindung-mit-der-nutzung-von-solarenergie",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [15]
     },
     {
@@ -540,14 +540,14 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-thermischen-solaranlagen-fuer-die-gebaeudeversorgung",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [2]
     },
     {
         "Kategorie": "Wasserstoff",
         "Fördermittelnehmer": "Unternehmen , Privat",
         "Förderung": "Förderung von stationären wasserstoffbasierten Energiesystemen in Verbindung mit einer Photovoltaikanlage",
-        "Förderhöhe": "",
+        "Förderhöhe": "-",
         "Fördergegenstand": "Elektrolyseure, Wasserstoffspeicher, Wasserstoff Heizkessel",
         "Fördervoraussetzung": "Wasserstoffsystem in verbindung mit PV",
         "Wirtschaftlichkeitslücke": "nein",
@@ -556,7 +556,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-stationaeren-wasserstoffbasierten-energiesystemen-verbindung-mit-einer",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [37]
     },
     {
@@ -572,7 +572,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-seismischen-messungen-fuer-mitteltiefe-und-tiefe-hydrothermale-geothermie",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -588,7 +588,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-einer-machbarkeitsstudie-fuer-mitteltiefe-und-tiefe-hydrothermale-geothermie",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -604,7 +604,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-einer-vorstudie-fuer-mitteltiefe-und-tiefe-hydrothermale-geothermie",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -620,7 +620,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-einer-mitteltiefen-dublette",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -636,7 +636,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-bohrungen-fuer-mitteltiefe-erdwaermesonden",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -652,7 +652,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-oberflaechennaher-geothermie-verbindung-mit-einer-waermepumpe",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -668,7 +668,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-beratungsleistungen-fuer-kleinwindenergieanlagen",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [14]
     },
     {
@@ -684,7 +684,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-carport-photovoltaikdachanlagen",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [38, 39]
     },
     {
@@ -700,7 +700,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-fassaden-photovoltaikanlagen",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [38, 40]
     },
     {
@@ -716,7 +716,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-der-erneuerung-der-hauselektrik-bestehenden-mehrparteienhaeusern-im-vorfeld-der",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [38, 41]
     },
     {
@@ -732,7 +732,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-wasserkraftanlagen",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [42]
     },
     {
@@ -748,7 +748,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-beratungsleistungen-zum-photovoltaikausbau",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [38, 43]
     },
     {
@@ -764,7 +764,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-photovoltaik-dachanlagen-auf-kommunalen-gebaeuden-zusammen-mit-einem-batteriespeicher",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [38, 44]
     },
     {
@@ -780,7 +780,7 @@
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung mit BEG möglich bis 60 %, nicht EEG",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-photovoltaikanlagen-die-nicht-ueber-das-erneuerbare-energien-gesetz-eeg-gefoerdert",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [38]
     },
     {
@@ -791,12 +791,12 @@
         "Fördergegenstand": "Errichtung oder Erweiterung von thermischen Solarkollektoranlagen zur Bereitstellung von solarer Prozesswärme",
         "Fördervoraussetzung": "mindestens 20 - 1.000 Qm",
         "Wirtschaftlichkeitslücke": "nein",
-        "Fördergeber": "",
+        "Fördergeber": "-",
         "Auslaufdatum": "7/1/2024",
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/stromerzeugung-waermeerzeugung/foerderung-von-thermischen-solaranlagen-zur-erzeugung-von-prozesswaerme",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [2, 45]
     },
     {
@@ -808,11 +808,11 @@
         "Fördervoraussetzung": "Förderung nur bei Wohngebäuden",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "BAFA",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
-        "Kumulierung": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
+        "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Energieberatung/Energieberatung_Wohngebaeude/energieberatung_wohngebaeude_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [5]
     },
     {
@@ -824,11 +824,11 @@
         "Fördervoraussetzung": "Förderung nur bei Wohngebäuden",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "BAFA",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
-        "Kumulierung": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
+        "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Effiziente_Gebaeude/Sanierung_Wohngebaeude/Gebaeudehuelle/gebaeudehuelle_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [11, 46, 47, 48, 49, 50]
     },
     {
@@ -840,11 +840,11 @@
         "Fördervoraussetzung": "Förderung nur bei Wohngebäuden",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "BAFA",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
-        "Kumulierung": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
+        "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Effiziente_Gebaeude/Sanierung_Wohngebaeude/Anlagentechnik/anlagentechnik_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [51, 34, 56, 57, 58]
     },
     {
@@ -856,11 +856,11 @@
         "Fördervoraussetzung": "Förderung nur bei Wohngebäuden",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "BAFA",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
-        "Kumulierung": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
+        "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Effiziente_Gebaeude/Sanierung_Wohngebaeude/Anlagen_zur_Waermeerzeugung/anlagen_zur_waermeerzeugung_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [52]
     },
     {
@@ -872,11 +872,11 @@
         "Fördervoraussetzung": "Förderung nur bei Wohngebäuden",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "BAFA",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
-        "Kumulierung": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
+        "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Effiziente_Gebaeude/Sanierung_Wohngebaeude/Heizungsoptimierung/heizungsoptimierung_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [52]
     },
     {
@@ -888,11 +888,11 @@
         "Fördervoraussetzung": "andere Förderung im BEW",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "BAFA",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
-        "Kumulierung": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
+        "Kumulierung": "-",
         "Link": "https://www.bafa.de/DE/Energie/Effiziente_Gebaeude/Sanierung_Wohngebaeude/Fachplanung_Baubegleitung/fachplanung_baubegleitung_node.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [53, 54]
     },
     {
@@ -904,11 +904,11 @@
         "Fördervoraussetzung": "Detailierte Anlagenbeschreibung, Netz an mehrere gebäude",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "Progress NRW",
-        "Auslaufdatum": "",
+        "Auslaufdatum": "-",
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-anlagen-zur-nutzung-von-abwaerme-zur-leitungsgebundenen-waermeversorgung",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [23]
     },
     {
@@ -920,27 +920,27 @@
         "Fördervoraussetzung": "energieeffizienzsteigerung um mindestens 10 %",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "Progress NRW",
-        "Auslaufdatum": "",
+        "Auslaufdatum": "-",
         "Fördertopf": "AGVO",
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/fernwaermeleitungen-waermekonzepte/foerderung-von-anlagen-zur-nutzung-von-abwaerme-zur-verbesserung-der-energieeffizienz",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [23]
     },
     {
         "Kategorie": "Dämmung, Vorhangfassaden, Fenster, Türen, Heizungsanalge, Lüftungsanlage",
-        "Fördermittelnehmer": "privat",
+        "Fördermittelnehmer": "Privat",
         "Förderung": "Einkommensteuergesetz (EStG)",
         "Förderhöhe": "maximal 14.000 € pro Jahr, bei 7 % auf drei Jahre",
         "Fördergegenstand": "Einkommensteuersparung bei Maßnahmen zur energietischen Sanierung",
         "Fördervoraussetzung": "eigengenutze Gebäude, abhängig von anderen Steuerersparnissen",
         "Wirtschaftlichkeitslücke": "nein",
         "Fördergeber": "Steuerersparnis",
-        "Auslaufdatum": "",
-        "Fördertopf": "",
+        "Auslaufdatum": "-",
+        "Fördertopf": "-",
         "Kumulierung": "Kumulierungsverbot",
         "Link": "https://www.gesetze-im-internet.de/estg/__35c.html",
-        "Besonderheit": "",
+        "Besonderheit": "-",
         "KategorieIds": [11, 46, 47, 48, 55, 33]
     }
 ]

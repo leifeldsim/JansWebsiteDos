@@ -1,0 +1,5 @@
+- Unternhemen/Private -> nur eins von beiden auswählbar machen
+- CSS
+- navbar schneller laden
+- String-File
+-
