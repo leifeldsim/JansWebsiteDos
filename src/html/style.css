@@ -162,3 +162,8 @@ body {
     list-style: none;
     float: left;
   }
+
+  /* TODO needs to be dynamic!!! */
+h1{
+  margin-top: 100px;
+}
