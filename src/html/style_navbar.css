@@ -12,6 +12,7 @@ li {
 
 nav{
     position: fixed;
+    top: 0px;
 }
 
 li a, .dropbtn {

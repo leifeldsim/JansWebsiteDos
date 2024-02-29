@@ -493,7 +493,7 @@
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-steuereinrichtungen-fuer-den-betrieb-von-waermepumpen-verbindung-mit-einer",
         "Besonderheit": "-",
-        "KategorieIds": [1, 35]
+        "KategorieIds": [3, 35]
     },
     {
         "Kategorie": "Speicherheizung, Wärmepumpe, Solarthermie",
@@ -509,7 +509,7 @@
         "Kumulierung": "Kumulierung möglich, Richtlinien nachlesen",
         "Link": "https://www.bra.nrw.de/energie-bergbau/foerderprogramme-fuer-klimaschutz-und-energiewende/foerderbereiche/energiesysteme-fuer-klimagerechte-gebaeude/foerderung-von-austausch-bestehender-elektrischer-speicherheizungen-verbindung-mit-der-installation",
         "Besonderheit": "-",
-        "KategorieIds": [36, 1, 2]
+        "KategorieIds": [36, 3, 2]
     },
     {
         "Kategorie": "Biomassekessel",
