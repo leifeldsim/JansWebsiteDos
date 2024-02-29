@@ -1,5 +1,5 @@
-- Unternhemen/Private -> nur eins von beiden auswählbar machen
+- Unternhemen/Private -> nur eins von beiden auswählbar machen [DONE]
 - CSS
-- navbar schneller laden
 - String-File
--
+- Texte einbauen
+- Dropdown fixen

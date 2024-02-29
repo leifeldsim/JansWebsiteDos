@@ -1,0 +1,39 @@
+{
+    "overview":[
+        {
+           "id": "navbar_bafa_effiziente_gebauede",
+           "headline": "Bundesförderung für effiziente Gebäude",
+           "info_text": "voll wichtiger text1"
+        },
+        {
+           "id": "navbar_bafa_effiziente_waermenetze",
+           "headline": "Bundesförderung für effiziente Wärmenetze",
+           "info_text": "voll wichtiger text2"
+        },
+        {
+            "id": "navbar_bafa_energieberatung",
+            "headline": "Bundesförderung für Energieberatung",
+            "info_text": "voll wichtiger text3"
+         },
+         {
+            "id": "navbar_bafa_wirtschaft",
+            "headline": "Bundesförderung in der Wirtschaft",
+            "info_text": "voll wichtiger text4"
+         },
+         {
+            "id": "navbar_bafa_kraftwaermekopplung",
+            "headline": "Bundesförderung für Kraftwärmekopplung",
+            "info_text": "voll wichtiger text5"
+         },
+         {
+            "id": "navbar_progressnrw_energieverwendung",
+            "headline": "Programm für rationale Energieverwendung",
+            "info_text": "voll wichtiger text6"
+         },
+         {
+            "id": "navbar_progressnrw_emobi",
+            "headline": "Elektromobilität",
+            "info_text": "voll wichtiger text7"
+         }
+    ]
+}

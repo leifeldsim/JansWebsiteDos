@@ -1,66 +1,17 @@
-<header>
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a, .dropbtn {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-            /* Change the link color to #111 (black) on hover */
-        li a:hover, .dropdown:hover .dropbtn {
-            background-color: red;
-        }
-
-        li.dropdown {
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content ul li:hover ul {
-            display: block;
-            visibility: visible;
-        }
-    </style>
+<nav class="top-bar fixed">
     <ul>
         <li><a href="consultation.html" id="navbar_subsidies_consultation"></a></li>
         <li><a href="news.html" id="navbar_news"></a></li>
-        <li class="dropdown">
+        <li><a href="overview.html?navbar_bafa_effiziente_gebauede" id="navbar_bafa_effiziente_gebauede"></a></li>
+        <li><a href="overview.html?navbar_bafa_effiziente_waermenetze" id="navbar_bafa_effiziente_waermenetze"></a></li>
+        <li><a href="overview.html?navbar_bafa_energieberatung" id="navbar_bafa_energieberatung"></a></li>
+        <li><a href="overview.html?navbar_bafa_wirtschaft" id="navbar_bafa_wirtschaft"></a></li>
+        <li><a href="overview.html?navbar_bafa_kraftwaermekopplung" id="navbar_bafa_kraftwaermekopplung"></a></li>
+
+        <li><a href="overview.html?navbar_progressnrw_energieverwendung" id="navbar_progressnrw_energieverwendung"></a></li>
+        <li><a href="overview.html?navbar_progressnrw_emobi" id="navbar_progressnrw_emobi"></a></li>
+
+        <!--<li class="dropdown">
             <a href="overview.html" class="dropbtn">TEST1</a>
             <div class="dropdown-content">
                 <a href="overview.html">Test1_1</a>
@@ -75,14 +26,20 @@
                 <a href="overview.html">Test2_2</a>
                 <a href="overview.html">Test2_3</a>
             </div>
-        </li>
+        </li> -->
     </ul> 
-</header>
+</nav>
 <script>
-    /*document.getElementById("navbar_subsidies").innerHTML = "Förderung";*/
     document.getElementById("navbar_subsidies_consultation").innerHTML = "Beratung";
-    /*document.getElementById("navbar_subsidies_overview").innerHTML = "Übersicht";*/
     document.getElementById("navbar_news").innerHTML = "News";
-    /*document.getElementById("navbar_search_btn").innerHTML = "Search";
-    document.getElementById("navbar_search_input").innerHTML = "Search";*/
+
+    document.getElementById("navbar_bafa_effiziente_gebauede").innerHTML = "Bundesförderung für effiziente Gebäude";
+    document.getElementById("navbar_bafa_effiziente_waermenetze").innerHTML = "Bundesförderung für effiziente Wärmenetze";
+    document.getElementById("navbar_bafa_energieberatung").innerHTML = "Bundesförderung für Energieberatung";
+    document.getElementById("navbar_bafa_wirtschaft").innerHTML = "Bundesförderung in der Wirtschaft";
+    document.getElementById("navbar_bafa_kraftwaermekopplung").innerHTML = "Bundesförderung für Kraftwärmekopplung";
+
+    document.getElementById("navbar_progressnrw_energieverwendung").innerHTML = "Programm für rationale Energieverwendung";
+    document.getElementById("navbar_progressnrw_emobi").innerHTML = "Elektromobilität";
 </script>
+<link rel="stylesheet" href="style_navbar.css">

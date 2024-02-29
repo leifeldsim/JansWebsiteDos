@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de" >
 <head>
     <meta charset='utf-8'>
     <title>Beratung</title>
@@ -18,30 +18,48 @@
     </script> 
     <!--end of Navigation bar-->
 
+
+    <script>
+        function onlyOne(cb){
+            var checkboxes = document.getElementsByName('cb_customer')
+            checkboxes.forEach((item) => {
+                if(item !== cb) item.checked = false
+            })
+        }   
+    </script>
+
     <div>
         <h1>Beratung</h1>
         <p>Bla bla bla.....hier stehen wichtige Sachen</p>
     </div>
     <section>
-        <div>Kundenart <br>
-            <input type="checkbox" id="customertype_private" value="Privat">
+        <div><h3>Kundenart</h3>
+            <input type="checkbox" id="customertype_private" value="Privat" name="cb_customer" onclick="onlyOne(this)">
             <label for="customertype_private"> Privat </label><br>
-            <input type="checkbox" id="customertype_company" value="Unternehmen">
+            <input type="checkbox" id="customertype_company" value="Unternehmen" name="cb_customer" onclick="onlyOne(this)">
             <label for="customertype_company"> Unternehmen</label><br>
+            <label id="error_txt_customer" class="error"></label>
+        </div><br>
+        <div><h3>Maßnahmen</h3>
+            <div id="cb_massnahmen_typ_gebaeude" class="block checkboxes">
+                <h5 id="cb_massnahmen_typ_gebaeude_header"></h5>
+            </div>
+            <div id="cb_massnahmen_typ_aussenbereich" class="block checkboxes"><br>
+                <h5 id="cb_massnahmen_typ_aussenbereich_header"></h5>
+            </div>
+            <div id="cb_massnahmen_typ_sonstige" class="block checkboxes"><br>
+                <h5 id="cb_massnahmen_typ_sonstige_header"></h5>
+            </div><br>
+            <label id="error_txt_massnahmen" class="error" ></label>
         </div>
-        <div>Maßnahmen <br>
-            <div id="cb_massnahmen_typ_gebaeude" class="block"><br>
-            </div>
-            <div id="cb_massnahmen_typ_aussenbereich" class="block"><br>
-            </div>
-            <div id="cb_massnahmen_typ_sonstige" class="block"><br>
-            </div>
-        </div>
-        <button onclick="submitConsultation()" id="btn_submit">Übernehmen</button>
+        <br>
+        <button onclick="submitConsultation()" id="btn_submit" class="button1">Übernehmen</button>
     </section>
+    <br>
+    <br>
     <section>
         <div><h2>Mögliche Fördermaßnahmen</h2> <br>
-            <table id="table_consultation">
+            <table id="table_consultation" class="container">
                 <tr>
                   <th>Kategorien</th>
                   <th>Förderung</th>
@@ -57,5 +75,6 @@
 
     <script src="../src_for_real/consultation.js"></script>
     <script src="../src_for_real/data_operations.js"></script>
+    <link rel="stylesheet" href="style.css">
 </body>
 </html>

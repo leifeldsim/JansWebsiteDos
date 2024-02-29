@@ -18,11 +18,14 @@ this.customerType = CUSTOMER_TYPE.COMPANY;
 setDefaultValues();
 
 function fillConstList(data) {
+    document.getElementById("cb_massnahmen_typ_gebaeude_header").innerText = "Gebäude";
+    document.getElementById("cb_massnahmen_typ_aussenbereich_header").innerText = "Außenbereich";
+    document.getElementById("cb_massnahmen_typ_sonstige_header").innerText = "Sonstige";
     for (let i = 1; i <= Object.keys(data).length; i++) {
         this.constList.push(data[i]);
         addCheckboxes(data[i], i);
     }
-}
+}   
 function setDefaultValues(){
     fetch('../json/kategorien.json')
     .then(response => response.json())
@@ -38,7 +41,8 @@ function addCheckboxes(massnahme, index){
     checkbox.id = CHECKBOX_ID_PREFIX + index;
     checkbox.name = CHECKBOX_ID_PREFIX + index;
     var textContent = document.createTextNode(massnahme.category);
-
+    
+    label.class = "label"
     label.appendChild(checkbox);
     label.appendChild(textContent);
     // Then append the whole thing onto the body
@@ -79,7 +83,35 @@ function getCheckedCategories(){
     return checkedMassnahmen;
 }
 
+function changeCustomerErrorText(text){
+    let error_label_customer = document.getElementById("error_txt_customer");
+    error_label_customer.innerText = text;
+}
+
+function changeMassnahmenErrorText(text){
+    let error_label_massnahmen = document.getElementById("error_txt_massnahmen");
+    error_label_massnahmen.innerText = text;
+}
+
+function setCustomerError(){
+    changeCustomerErrorText("Eine Kundenart muss ausgewählt werden!");
+}
+
+function setMassnahmenError(){
+    changeMassnahmenErrorText("Mindestens eine Massnahme muss ausgewählt werden!");
+}
+
+function removeCustomerError(){
+    changeCustomerErrorText("");
+}
+
+function removeMassnahmenError(){
+    changeMassnahmenErrorText("");
+}
+
 function submitConsultation(){
+    removeCustomerError();
+    removeMassnahmenError();
     let checkedMassnahmen = getCheckedCategories();        
     checkedMassnahmen.sort(function(a, b){return a - b}); 
 
@@ -92,6 +124,11 @@ function submitConsultation(){
         this.customerType = CUSTOMER_TYPE.COMPANY;
     }else{
         this.customerType = CUSTOMER_TYPE.NOT_DEFINED
+        setCustomerError();
+    }
+
+    if(checkedMassnahmen.length == 0){
+        setMassnahmenError();
     }
 
     let m = new Massnahmen(checkedMassnahmen, customerType);
