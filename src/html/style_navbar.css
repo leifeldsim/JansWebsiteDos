@@ -11,9 +11,13 @@ li {
 }
 
 nav{
+    display: inline-block;
     position: fixed;
-    top: 0px;
 }
+
+nav li {
+    float: left;
+ }
 
 li a, .dropbtn {
     display: inline-block;

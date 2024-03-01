@@ -34,25 +34,46 @@ function setDefaultValues(){
 
 function addCheckboxes(massnahme, index){    
     // Create the inner div before appending to the body
+    let cb_element;
+    let br = "<br>";
+
     var label = document.createElement("label")
     var checkbox = document.createElement("input");
 
     checkbox.type = "checkbox";
+    checkbox.className = "cb_kategorien";
     checkbox.id = CHECKBOX_ID_PREFIX + index;
     checkbox.name = CHECKBOX_ID_PREFIX + index;
-    var textContent = document.createTextNode(massnahme.category);
+    var textContent = document.createTextNode(" " + massnahme.category);
     
-    label.class = "label"
+    label.className = "label";
     label.appendChild(checkbox);
     label.appendChild(textContent);
     // Then append the whole thing onto the body
     if(massnahme.type == MASSNAHMEN_ART.BUILDING){
-        document.getElementById("cb_massnahmen_typ_gebaeude").appendChild(label);
+        cb_element = document.getElementById("cb_massnahmen_typ_gebaeude");
     }else if(massnahme.type == MASSNAHMEN_ART.OUTSIDE){
-        document.getElementById("cb_massnahmen_typ_aussenbereich").appendChild(label);
+        cb_element = document.getElementById("cb_massnahmen_typ_aussenbereich");
     }else if(massnahme.type == MASSNAHMEN_ART.OTHER){
-        document.getElementById("cb_massnahmen_typ_sonstige").appendChild(label);
+        cb_element = document.getElementById("cb_massnahmen_typ_sonstige");
     }
+    /*
+    if(countTemp(cb_element) % 3 == 0){
+        label.innerHTML += br; 
+    }
+    */
+
+    cb_element.appendChild(label);
+}
+
+function countTemp(element){
+    let count = 0;
+    for (let i = 0; i < element.childNodes.length; i++) {
+        if(element.childNodes[i].class == "label"){
+            count++;
+        }
+    }
+    return count;
 }
 
 //------------------------------------------------
@@ -61,6 +82,8 @@ function getCheckedCategories(){
     let checkedMassnahmen = []
     let cb_div = document.getElementById("cb_massnahmen_typ_gebaeude");
     for(let i = 1; i < cb_div.childElementCount; i++){
+        console.log(cb_div.children[i]);
+        console.log(cb_div.children[i].childNodes[0]);
         if(cb_div.children[i].childNodes[0].checked){
             let checkboxId = cb_div.children[i].childNodes[0].name.substring(CHECKBOX_ID_PREFIX.length)
             checkedMassnahmen.push(parseInt(checkboxId));
@@ -83,35 +106,64 @@ function getCheckedCategories(){
     return checkedMassnahmen;
 }
 
-function changeCustomerErrorText(text){
+function setCustomerErrorText(text){
     let error_label_customer = document.getElementById("error_txt_customer");
     error_label_customer.innerText = text;
 }
 
-function changeMassnahmenErrorText(text){
+function setMassnahmenErrorText(text){
     let error_label_massnahmen = document.getElementById("error_txt_massnahmen");
     error_label_massnahmen.innerText = text;
 }
 
+function setGeneralErrorText(text){
+    let error_label_general = document.getElementById("error_txt_general");
+    error_label_general.innerText = text;
+}
+
+function updateGeneralErrorText(){
+    let error_label_customer = document.getElementById("error_txt_customer");
+    let error_label_massnahmen = document.getElementById("error_txt_massnahmen");
+    
+    let error_text = "";
+
+    if(error_label_customer.textContent != "" && error_label_massnahmen.textContent != ""){
+        error_text = "Kundenart und Maßnahmen";
+    }else if(error_label_customer.textContent == "" && error_label_massnahmen.textContent != ""){
+        error_text = "Maßnahmen"
+    }else if(error_label_customer.textContent != "" && error_label_massnahmen.textContent == ""){
+        error_text = "Kundenart"
+    }
+
+    setGeneralErrorText("Fehler bei Auswahl für " + error_text);
+}
+
+function removeGeneralError() {
+    setGeneralErrorText("");
+}
+
 function setCustomerError(){
-    changeCustomerErrorText("Eine Kundenart muss ausgewählt werden!");
+    setCustomerErrorText("Eine Kundenart muss ausgewählt werden!");
+    updateGeneralErrorText();
 }
 
 function setMassnahmenError(){
-    changeMassnahmenErrorText("Mindestens eine Massnahme muss ausgewählt werden!");
+    setMassnahmenErrorText("Mindestens eine Massnahme muss ausgewählt werden!");
+    updateGeneralErrorText();
 }
 
 function removeCustomerError(){
-    changeCustomerErrorText("");
+    setCustomerErrorText("");
 }
 
 function removeMassnahmenError(){
-    changeMassnahmenErrorText("");
+    setMassnahmenErrorText("");
 }
 
 function submitConsultation(){
     removeCustomerError();
     removeMassnahmenError();
+    removeGeneralError();
     let checkedMassnahmen = getCheckedCategories();        
     checkedMassnahmen.sort(function(a, b){return a - b}); 
 
@@ -123,19 +175,31 @@ function submitConsultation(){
     }else if(company_cb.checked){
         this.customerType = CUSTOMER_TYPE.COMPANY;
     }else{
-        this.customerType = CUSTOMER_TYPE.NOT_DEFINED
-        setCustomerError();
+        this.customerType = CUSTOMER_TYPE.NOT_DEFINED;
     }
 
-    if(checkedMassnahmen.length == 0){
-        setMassnahmenError();
-    }
+    if(checkError(this.customerType, checkedMassnahmen)) return
 
     let m = new Massnahmen(checkedMassnahmen, customerType);
 
     fetch('../json/massnahmen.json')
     .then(response => response.json())
     .then(data => processInput(data, m))
+}
+
+function checkError(customerType, checkedMassnahmen){
+    let error = false;
+    if(customerType == CUSTOMER_TYPE.NOT_DEFINED){
+        setCustomerError();
+        error = true;
+    }
+    if(checkedMassnahmen.length == 0){
+        setMassnahmenError();
+        error = true;
+    }
+
+    return error;
+    
 }
 
 function checkCategorieIds(jsonIds, checkedIds) {
@@ -169,11 +233,13 @@ function getMassnahmen(jsondata, m){
 
 function populateConsultationTable(massnahmen){
     let table = document.getElementById("table_consultation");
+    let error_msg = "Keine Fördermaßnahmen gefunden!";
     clearTable(table);
     if(massnahmen.length == 0){
         let row = table.insertRow();
         let no_massnahmen_found = row.insertCell();
-        no_massnahmen_found.innerHTML = "Keine Fördermaßnahmen gefunden!";
+        no_massnahmen_found.innerHTML = error_msg;
+        setGeneralErrorText(error_msg);
         return;
     }
     massnahmen.forEach(item => {
