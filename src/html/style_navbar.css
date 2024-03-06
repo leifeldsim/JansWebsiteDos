@@ -10,9 +10,16 @@ li {
     float: left;
 }
 
+#nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
 nav{
     display: inline-block;
+    text-align: center;
     position: fixed;
+    top: 0px;
 }
 
 nav li {

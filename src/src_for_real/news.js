@@ -6,6 +6,27 @@ function loadNewsList(data){
     }
     sortNews();
     addNewsToSite();
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+            content = content.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    } 
+
 }
 
 function loadNews(){
@@ -22,38 +43,42 @@ function sortNews(){
 }
 
 function addNewsToSite(){
-    var iDiv = document.createElement('div');
-    iDiv.id = "news_block";
-    iDiv.className = "block";
-    let temp_trenner = "\n"; //TODO delete
+    let temp_trenner = ""; //TODO delete
     for(let i = 0; i < this.news.length; i++){
+        var iDiv = document.createElement('div');
+        iDiv.className = "news_block";
         let curr_news = this.news[i];
-        var innerDiv = document.createElement('div');
-
-        var innerTitle = document.createElement('a');
-        var innerinnerTitle = document.createElement('h4');
-        innerinnerTitle.innerText = curr_news.title + temp_trenner;
-        innerTitle.appendChild(innerinnerTitle);
+        var innerDiv = document.createElement('h4');
+        innerDiv.className = "collapsible";
+        innerDiv.innerText = curr_news.title + temp_trenner;
     
-        var innerDate = document.createElement('a');
+        var innerDate = document.createElement('p');
+        innerDate.className = "content";
+        innerDate.style.display = "none";
         innerDate.innerText = curr_news.news_date + temp_trenner;
-    
-        var innerShortText = document.createElement('a');
+
+        var innerShortText = document.createElement('p');
+        innerShortText.style.display = "none";
+        innerShortText.className = "content";
         innerShortText.innerText = curr_news.shortText + temp_trenner;
     
-        var innerLongText = document.createElement('a');
+        var innerLongText = document.createElement('p');
+        innerLongText.style.display = "none";
+        innerLongText.className = "content";
         innerLongText.innerText = curr_news.longText + temp_trenner;
     
-        innerDiv.appendChild(innerTitle);
+        /*
         innerDiv.appendChild(innerDate);
-        innerDiv.appendChild(innerShortText);
-        innerDiv.appendChild(innerLongText);
+        innerDiv.appendChild(innerLongText);*/
         
         // The variable iDiv is still good... Just append to it.
         iDiv.appendChild(innerDiv);
+        iDiv.appendChild(innerDate);
+        iDiv.appendChild(innerLongText);
+
         
         // Then append the whole thing onto the body
-        document.getElementById("news_block").appendChild(innerDiv);
+        document.getElementById("news_block").appendChild(iDiv);
     }    
 }
 

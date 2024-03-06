@@ -1,4 +1,10 @@
+:root {
+  --navbar-height: 101px;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 1.42em;
@@ -6,23 +12,25 @@ body {
     background-color:#1F2739;
 }
 
-#user_selection{
-  text-align: center;
-  display: block;
-  width: 80%;  
-  padding: 0 0 8em 0;
-  padding-bottom: 2%;
-  padding-top: 2%;
-  padding-left:2%;  
-  margin: 0 auto;
+.flex{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-around;
+  /*width: 80%;  */
+}
+
+#flex{
+  row-gap: 20px;
 }
   
 h1 {
   font-size:3em; 
   font-weight: 300;
   line-height:1em;
-  text-align: center;
+  /*text-align: center;*/
   color: #4DC3FA;
+  margin-top: calc(var(--navbar-height) + 15px);
 }
   
 h2 {
@@ -64,7 +72,7 @@ h2 a {
 .container {
     text-align: center;
     overflow: hidden;
-    width: 80%;
+/*    width: 80%;*/
     margin: 0 auto;
     display: table;
     padding: 0 0 8em 0;
@@ -90,8 +98,6 @@ h2 a {
     background-color: #1F2739;
     text-align: center;
 }
-
-.container td:first-child { color: #FB667A; }
 
 /*
 .container tr:hover {
@@ -171,10 +177,6 @@ h2 a {
     font-size: large;
     font-weight: 750;
 }
-  /* TODO needs to be dynamic!!! */
-h1{
-  margin-top: 100px;
-}
 
 .label {
   width: 300px;
@@ -184,12 +186,53 @@ h1{
   padding-left: 25px;
 }
 
-.checkboxes {
-  text-align: left;
+checkbox{
   display: flex;
+  align-content: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
+
 .cb_customer_type{
   text-align: left;
+}
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+  background-color: #2f3647;
+  display: block;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #252931;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  color: #FFFFFF;
+  padding: 0 18px;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2f3647;
+} 
+
+.news_block {
+  background-color: #2f3647;
+}
+
+#news_block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }

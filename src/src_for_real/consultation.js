@@ -17,6 +17,31 @@ this.customerType = CUSTOMER_TYPE.COMPANY;
 
 setDefaultValues();
 
+function updateNavbarHeightReload(){
+    if (window.performance) {
+        console.info("window.performance works fine on this browser");
+    }    
+    if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        updateNavbarHeight();
+    }
+}
+
+function updateNavbarHeight(){
+    const navbar = document.getElementById("navbar"); 
+    if(navbar == null){
+        return;
+    }
+    const height = document.getElementById("navbar").clientHeight;
+    console.log(document.getElementById("navbar").offsetHeight);
+
+    console.log(height);
+    // Get the root element
+    var root = document.documentElement;
+    // Set the value of the --color-font-general variable to #000000
+    root.style.setProperty('--navbar-height', height + "px");
+
+}
+
 function fillConstList(data) {
     document.getElementById("cb_massnahmen_typ_gebaeude_header").innerText = "Gebäude";
     document.getElementById("cb_massnahmen_typ_aussenbereich_header").innerText = "Außenbereich";
@@ -25,7 +50,9 @@ function fillConstList(data) {
         this.constList.push(data[i]);
         addCheckboxes(data[i], i);
     }
-}   
+    updateNavbarHeight();
+}
+
 function setDefaultValues(){
     fetch('../json/kategorien.json')
     .then(response => response.json())
@@ -81,7 +108,7 @@ function countTemp(element){
 function getCheckedCategories(){
     let checkedMassnahmen = []
     let cb_div = document.getElementById("cb_massnahmen_typ_gebaeude");
-    for(let i = 1; i < cb_div.childElementCount; i++){
+    for(let i = 0; i < cb_div.childElementCount; i++){
         console.log(cb_div.children[i]);
         console.log(cb_div.children[i].childNodes[0]);
         if(cb_div.children[i].childNodes[0].checked){
@@ -90,14 +117,14 @@ function getCheckedCategories(){
         }
     }
     cb_div = document.getElementById("cb_massnahmen_typ_aussenbereich");
-    for(let i = 1; i < cb_div.childElementCount; i++){
+    for(let i = 0; i < cb_div.childElementCount; i++){
         if(cb_div.children[i].childNodes[0].checked){
             let checkboxId = cb_div.children[i].childNodes[0].name.substring(CHECKBOX_ID_PREFIX.length)
             checkedMassnahmen.push(parseInt(checkboxId));
         }
     }
     cb_div = document.getElementById("cb_massnahmen_typ_sonstige");
-    for(let i = 1; i < cb_div.childElementCount; i++){
+    for(let i = 0; i < cb_div.childElementCount; i++){
         if(cb_div.children[i].childNodes[0].checked){
             let checkboxId = cb_div.children[i].childNodes[0].name.substring(CHECKBOX_ID_PREFIX.length)
             checkedMassnahmen.push(parseInt(checkboxId));
@@ -178,7 +205,7 @@ function submitConsultation(){
         this.customerType = CUSTOMER_TYPE.NOT_DEFINED;
     }
 
-    if(checkError(this.customerType, checkedMassnahmen)) return
+    if(checkError(this.customerType, checkedMassnahmen)) return;
 
     let m = new Massnahmen(checkedMassnahmen, customerType);
 
