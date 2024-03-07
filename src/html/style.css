@@ -20,6 +20,13 @@ body {
   /*width: 80%;  */
 }
 
+.massnahmen {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
 #flex{
   row-gap: 20px;
 }
@@ -34,13 +41,13 @@ h1 {
 }
   
 h2 {
-  font-size:1em; 
-  font-weight: 300;
+  font-size:2em; 
+  font-weight: bold;
   text-align: center;
   display: block;
   line-height:1em;
-  padding-bottom: 2em;
-  color: #FB667A;
+  padding-bottom: 0.5em;
+  /*color: #FB667A;*/
 }
   
 h2 a {
@@ -49,7 +56,138 @@ h2 a {
   color: #FB667A;
   text-decoration: none;
 }
-  
+
+h3 {
+  font: size 1.5em; 
+  font-weight: 200;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 0.5em;
+  /*color: #FB667A;*/
+}
+
+.error{
+    color: red;
+    font-size: large;
+    font-weight: 750;
+}
+
+#cb_massnahmen {
+  visibility: hidden;
+}
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible_news {
+  background-color: #2f3647;
+  display: block;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 18px;
+  /*width: 100%;*/
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  height: 100%;
+  margin-bottom: 0px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible_news:hover {
+  background-color: #252931;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content_news {
+  color: #FFFFFF;
+  padding: 0 18px;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background-color: #2f3647;
+} 
+
+.news_block {
+  background-color: #2f3647;
+}
+
+#news_block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+}
+
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible_massnahmen {
+  display: block;
+  color: #FFFFFF;
+  cursor: pointer;
+  /*width: 100%;*/
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  height: 100%;
+  margin-bottom: 0px;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content_massnahmen {
+  /*color: #FFFFFF;
+  width: 100%;
+  padding: 0 18px;*/
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  overflow: hidden;
+} 
+
+.checkboxes {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  align-content: space-between;
+
+}
+
+.label { 
+  overflow: visible; 
+  white-space: initial; 
+  text-overflow: clip; 
+  width: 300px; 
+}​
+
+.customertype_box {
+  display: flex;
+  align-items: baseline;
+}
+
+.contact_list {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  align-content: space-evenly;
+  width: 100%;
+  padding-left: 50px;
+  row-gap: 50px;
+}
+
+.picture_block {
+  column-gap: 20px;
+}
+
+.picture_block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+
 .blue { color: #185875; }
 .yellow { color: #FFF842; }
   
@@ -170,69 +308,4 @@ h2 a {
 .button-1:active {
   box-shadow: none;
   transform: translateY(0);
-}
-
-.error{
-    color: red;
-    font-size: large;
-    font-weight: 750;
-}
-
-.label {
-  width: 300px;
-}
-
-.checkbox{
-  padding-left: 25px;
-}
-
-checkbox{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-
-.cb_customer_type{
-  text-align: left;
-}
-
- /* Style the button that is used to open and close the collapsible content */
- .collapsible {
-  background-color: #2f3647;
-  display: block;
-  color: #FFFFFF;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #252931;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  color: #FFFFFF;
-  padding: 0 18px;
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  background-color: #2f3647;
-} 
-
-.news_block {
-  background-color: #2f3647;
-}
-
-#news_block {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
 }

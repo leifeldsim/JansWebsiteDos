@@ -2,7 +2,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     background-color: #333;
 }
 
@@ -19,6 +19,7 @@ nav{
     display: inline-block;
     text-align: center;
     position: fixed;
+    width: 100%;
     top: 0px;
 }
 
@@ -57,6 +58,8 @@ li.dropdown {
     text-decoration: none;
     display: block;
     text-align: left;
+    width: max-content;
+    height: max-content;
 }
 
 .dropdown-content a:hover {

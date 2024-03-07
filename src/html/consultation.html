@@ -33,30 +33,56 @@
     <div id="flex" class="flex">
         <h1 id="firstElement">Beratung</h1>
         <p>Bla bla bla.....hier stehen wichtige Sachen</p>
-        <div class="flex"><h3>Kundenart</h3>
-            <div>
-                <input class="cb_customer_type" type="checkbox" id="customertype_private" value="Privat" name="cb_customer" onclick="onlyOne(this)">
-                <label for="customertype_private"> Privat </label><br>
-            </div>
-            <div>
-                <input class="cb_customer_type" type="checkbox" id="customertype_company" value="Unternehmen" name="cb_customer" onclick="onlyOne(this)">
-                <label for="customertype_company"> Unternehmen</label><br>
+        <div class="flex"><h2>Kundenart</h2>
+            <div class="customertype_box">
+                <div>
+                    <input class="cb_customer_type" type="checkbox" id="customertype_private" value="Privat" name="cb_customer" onclick="onlyOne(this)">
+                    <label for="customertype_private"> Privat </label><br>
+                </div>
+                <div>
+                    <input class="cb_customer_type" type="checkbox" id="customertype_company" value="Unternehmen" name="cb_customer" onclick="onlyOne(this)">
+                    <label for="customertype_company"> Unternehmen</label><br>
+                </div>
             </div>
             <label id="error_txt_customer" class="error"></label>
         </div><br>
-        <div class="flex" id="cb_massnahmen"><h3>Maßnahmen</h3><br>
-            <h5 id="cb_massnahmen_typ_gebaeude_header"></h5>
-            <div id="cb_massnahmen_typ_gebaeude" class="checkboxes"></div>
-            <br><br>
-            <h5 id="cb_massnahmen_typ_aussenbereich_header"></h5>
-            <div id="cb_massnahmen_typ_aussenbereich" class="checkboxes"></div>
-            <br><br>
-            <h5 id="cb_massnahmen_typ_sonstige_header"></h5>
-            <div id="cb_massnahmen_typ_sonstige" class="checkboxes"></div>
+        <div class="flex" id="cb_massnahmen"><h2>Maßnahmen</h2><br>
+            <div class="massnahmen" id="massnahmen_private">
+                <div>
+                    <h3 id="cb_massnahmen_typ_gebaeude_header_private"></h3>
+                    <div id="cb_massnahmen_typ_gebaeude_private" class="checkboxes"></div>
+                </div>
+                <br><br>
+                <div>
+                    <h3 id="cb_massnahmen_typ_aussenbereich_header_private"></h3>
+                    <div id="cb_massnahmen_typ_aussenbereich_private" class="checkboxes"></div>
+                </div>
+                <br><br>
+                <div>
+                    <h3 id="cb_massnahmen_typ_sonstige_header_private"></h3>
+                    <div id="cb_massnahmen_typ_sonstige_private" class="checkboxes"></div>
+                </div>
+            </div>
+            <div class="massnahmen" id="massnahmen_company">
+                <div>
+                    <h3 id="cb_massnahmen_typ_gebaeude_header_company"></h3>
+                    <div id="cb_massnahmen_typ_gebaeude_company" class="checkboxes"></div>
+                </div>
+                <br><br>
+                <div>
+                    <h3 id="cb_massnahmen_typ_aussenbereich_header_company"></h3>
+                    <div id="cb_massnahmen_typ_aussenbereich_company" class="checkboxes"></div>
+                </div>
+                <br><br>
+                <div>
+                    <h3 id="cb_massnahmen_typ_sonstige_header_company"></h3>
+                    <div id="cb_massnahmen_typ_sonstige_company" class="checkboxes"></div>
+                </div>
+            </div>
             <br><br>
             <label id="error_txt_massnahmen" class="error" ></label>
         </div>
-        <br>
+        <br><br>
         <button onclick="submitConsultation()" id="btn_submit" class="button1">Übernehmen</button>
         <br><br>
         <label id="error_txt_general" class="error" ></label>

@@ -30,6 +30,8 @@ function loadDataFromID(overview_data){
             break;            
         }
     }
+
+    updateNavbarHeight();
 }
 
 function loadData(){
