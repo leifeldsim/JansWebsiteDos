@@ -21,6 +21,7 @@ function addContactsToSite(){
     for(let i = 0; i < this.contacts.length; i++){
         var iDiv = document.createElement('div');
         iDiv.className = "contact_block";
+        iDiv.id = "contact_block";
         
         var pictureAndDataDiv = document.createElement('div');
         pictureAndDataDiv.className = "picture_block";
@@ -57,6 +58,7 @@ function addContactsToSite(){
         }
 
         pictures.setAttribute("src", pictureFile);
+        pictures.setAttribute("alt", "Bild von " + curr_contacts.name);
         pictures.setAttribute("height", "400");
         pictures.setAttribute("width", "300");
 

@@ -24,9 +24,10 @@ function updateNavbarHeightReload(){
 }
 
 function updateNavbarHeight(){
-    const navbar = document.getElementById("navbar"); 
+    let navbar = document.getElementById("navbar"); 
     if(navbar == null){
-        return;
+        console.log("navbar is null");
+        return
     }
     const height = navbar.clientHeight;
 

@@ -1,5 +1,7 @@
 - Unternhemen/Private -> nur eins von beiden auswählbar machen [DONE]
-- CSS
+- CSS AUFRÄUMEN!!!
 - String-File
 - Texte einbauen
 - Dropdown fixen
+- navbar in impressum bugged (default )
+- 

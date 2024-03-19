@@ -5,12 +5,10 @@
     <title>Beratung</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script defer src="../src_for_real/consultation.js"></script>
     <script defer src="../src_for_real/data_operations.js"></script>
 </head>
-<body onresize="updateNavbarHeight()" onload="updateNavbarHeight()">
+<body onresize="updateNavbarHeight()"  onload="updateNavbarHeight()">
     <!--Navigation bar-->
     <div id="nav-placeholder" class="navbar"></div>
     <script>
@@ -30,67 +28,52 @@
         }   
     </script>
 
-    <div id="flex" class="flex">
-        <h1 id="firstElement">Beratung</h1>
+    <div class="container_userinput">
+        <h1>Beratung</h1>
         <p>Bla bla bla.....hier stehen wichtige Sachen</p>
-        <div class="flex"><h2>Kundenart</h2>
-            <div class="customertype_box">
+        <div class="container_checkbox"><h2>Kundenart</h2>
+            <div class="container_customertype" id="container_customertype">
                 <div>
                     <input class="cb_customer_type" type="checkbox" id="customertype_private" value="Privat" name="cb_customer" onclick="onlyOne(this)">
-                    <label for="customertype_private"> Privat </label><br>
+                    <label for="customertype_private"> Privat </label>
                 </div>
                 <div>
                     <input class="cb_customer_type" type="checkbox" id="customertype_company" value="Unternehmen" name="cb_customer" onclick="onlyOne(this)">
-                    <label for="customertype_company"> Unternehmen</label><br>
+                    <label for="customertype_company"> Unternehmen</label>
                 </div>
             </div>
             <label id="error_txt_customer" class="error"></label>
-        </div><br>
-        <div class="flex" id="cb_massnahmen"><h2>Maßnahmen</h2><br>
-            <div class="massnahmen" id="massnahmen_private">
+        </div>
+        <div class="container_customertype" id="cb_massnahmen"><h2>Maßnahmen</h2>
+            <div class="massnahmen" id="massnahmen">
                 <div>
-                    <h3 id="cb_massnahmen_typ_gebaeude_header_private"></h3>
-                    <div id="cb_massnahmen_typ_gebaeude_private" class="checkboxes"></div>
+                    <h3 id="cb_massnahmen_typ_gebaeude_header"></h3>
+                    <div id="cb_massnahmen_typ_gebaeude" class="checkboxes"></div>
                 </div>
-                <br><br>
+                
                 <div>
-                    <h3 id="cb_massnahmen_typ_aussenbereich_header_private"></h3>
-                    <div id="cb_massnahmen_typ_aussenbereich_private" class="checkboxes"></div>
+                    <h3 id="cb_massnahmen_typ_aussenbereich_header"></h3>
+                    <div id="cb_massnahmen_typ_aussenbereich" class="checkboxes"></div>
                 </div>
-                <br><br>
+                
                 <div>
-                    <h3 id="cb_massnahmen_typ_sonstige_header_private"></h3>
-                    <div id="cb_massnahmen_typ_sonstige_private" class="checkboxes"></div>
-                </div>
-            </div>
-            <div class="massnahmen" id="massnahmen_company">
-                <div>
-                    <h3 id="cb_massnahmen_typ_gebaeude_header_company"></h3>
-                    <div id="cb_massnahmen_typ_gebaeude_company" class="checkboxes"></div>
-                </div>
-                <br><br>
-                <div>
-                    <h3 id="cb_massnahmen_typ_aussenbereich_header_company"></h3>
-                    <div id="cb_massnahmen_typ_aussenbereich_company" class="checkboxes"></div>
-                </div>
-                <br><br>
-                <div>
-                    <h3 id="cb_massnahmen_typ_sonstige_header_company"></h3>
-                    <div id="cb_massnahmen_typ_sonstige_company" class="checkboxes"></div>
+                    <h3 id="cb_massnahmen_typ_sonstige_header"></h3>
+                    <div id="cb_massnahmen_typ_sonstige" class="checkboxes"></div>
                 </div>
             </div>
-            <br><br>
+            
+            
             <label id="error_txt_massnahmen" class="error" ></label>
         </div>
-        <br><br>
+        
         <button onclick="submitConsultation()" id="btn_submit" class="button1">Übernehmen</button>
-        <br><br>
+        
         <label id="error_txt_general" class="error" ></label>
     </div>
-    <br>
-    <br>
+    
+    
     <div>
-        <div class="flex"><h2>Mögliche Fördermaßnahmen</h2> <br>
+        <div><h2>Mögliche Fördermaßnahmen</h2> 
             <table id="table_consultation" class="container">
                 <tr>
                   <th>Kategorien</th>
@@ -106,4 +89,7 @@
     </div>
     <link rel="stylesheet" href="style.css">
 </body>
+<footer>
+    <a href="impressum.html">Impressum</a>
+</footer>
 </html>

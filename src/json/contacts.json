@@ -6,7 +6,7 @@
             "career": "Jan hat mit 15 Jahren erfolgreich die Grundschule abgeschlossen",
             "phone_number": "110",
             "e_mail": "jan@jan.jan.com",
-            "pictures": "../pictures/jan_westoff.jpg",
+            "pictures": "../pictures/contacts/jan_westoff.jpg",
             "additional_info": "Jan ist als Kind sehr häufig auf den Kopf gefallen"
         },
         {
@@ -15,7 +15,7 @@
             "career": "Ist Top",
             "phone_number": "112",
             "e_mail": "email@cum.com",
-            "pictures": "../pictures/.jpg",
+            "pictures": "../pictures/contacts/default.jpg",
             "additional_info": "In allen Belangen deutlich besser"
         }
     ]

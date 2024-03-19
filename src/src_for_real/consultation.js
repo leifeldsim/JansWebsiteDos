@@ -31,54 +31,145 @@ const MASSNAHMEN_ART_COMPANY_JSON = {
 //------------------------------------------------
 //Build Website and set Default Values
 this.customerType = CUSTOMER_TYPE.COMPANY;
-const SHOW_MORE = "Mehr anzeigen";
-const SHOW_LESS = "Weniger anzeigen";
+const SHOW_MORE = "Mehr anzeigen...";
+const SHOW_LESS = "Weniger anzeigen...";
+
+this.companyMassnahmenSonstige;
+this.companyMassnahmenAussenbereich;
+this.companyMassnahmenGebaude;
+
+this.privateMassnahmenSonstige;
+this.privateMassnahmenAussenbereich;
+this.privateMassnahmenGebaude;
 
 setDefaultValues();
 
-function fillConstList(data) {
+function addMassnahmen(data){
+    let massnahmen_art;
+    if(this.customerType == CUSTOMER_TYPE.COMPANY){
+        massnahmen_art = MASSNAHMEN_ART_COMPANY_JSON;
+    }else{
+        massnahmen_art = MASSNAHMEN_ART_PRIVATE_JSON;
+    }
     for (let i = 1; i <= Object.keys(data).length; i++) {
         for(let j = 0; j < data[i].type.length; j++){
-            addCheckboxes(data[i], i, data[i].type[j]);
+            addCheckboxes(data[i], i, data[i].type[j], massnahmen_art);
         }
-    }
+    }    
+    
+}
 
-    addShowMoreButton(document.getElementById("cb_massnahmen_typ_gebaeude_private"));
-    addShowMoreButton(document.getElementById("cb_massnahmen_typ_aussenbereich_private"));
-    addShowMoreButton(document.getElementById("cb_massnahmen_typ_sonstige_private"));
-    addShowMoreButton(document.getElementById("cb_massnahmen_typ_gebaeude_company"));
-    addShowMoreButton(document.getElementById("cb_massnahmen_typ_aussenbereich_company"));
-    addShowMoreButton(document.getElementById("cb_massnahmen_typ_sonstige_company"));
+function updateMassnahmenToPrivate(){
+    let div = document.getElementById("cb_massnahmen_typ_gebaeude");
+    div.replaceWith(this.privateMassnahmenGebaude);
+    let div2 = document.getElementById("cb_massnahmen_typ_aussenbereich");
+    div2.replaceWith(this.privateMassnahmenAussenbereich);
+    let div3 = document.getElementById("cb_massnahmen_typ_sonstige");
+    div3.replaceWith(this.privateMassnahmenSonstige);
+}
 
+function updateMassnahmenToCompany(){
+    let div = document.getElementById("cb_massnahmen_typ_gebaeude");
+    div.replaceWith(this.companyMassnahmenGebaude);
+    let div2 = document.getElementById("cb_massnahmen_typ_aussenbereich");
+    div2.replaceWith(this.companyMassnahmenAussenbereich);
+    let div3 = document.getElementById("cb_massnahmen_typ_sonstige");
+    div3.replaceWith(this.companyMassnahmenSonstige);
+}
+
+function fillAllDivs(data){
+    let massnahmen_type;
+    
+    this.privateMassnahmenGebaude = document.createElement("div");
+    this.privateMassnahmenGebaude.id = "cb_massnahmen_typ_gebaeude";
+    this.privateMassnahmenGebaude.className = "checkboxes";
+
+    this.privateMassnahmenAussenbereich = document.createElement("div");
+    this.privateMassnahmenAussenbereich.id = "cb_massnahmen_typ_aussenbereich";
+    this.privateMassnahmenAussenbereich.className = "checkboxes";
+
+    this.privateMassnahmenSonstige = document.createElement("div");
+    this.privateMassnahmenSonstige.id = "cb_massnahmen_typ_sonstige";
+    this.privateMassnahmenSonstige.className = "checkboxes";
+    
+
+    this.companyMassnahmenGebaude = document.createElement("div");
+    this.companyMassnahmenGebaude.id = "cb_massnahmen_typ_gebaeude";
+    this.companyMassnahmenGebaude.className = "checkboxes";
+
+    this.companyMassnahmenAussenbereich = document.createElement("div");
+    this.companyMassnahmenAussenbereich.id = "cb_massnahmen_typ_aussenbereich";
+    this.companyMassnahmenAussenbereich.className = "checkboxes";
+
+    this.companyMassnahmenSonstige = document.createElement("div");
+    this.companyMassnahmenSonstige.id = "cb_massnahmen_typ_sonstige";
+    this.companyMassnahmenSonstige.className = "checkboxes";
+
+    for (let i = 1; i <= Object.keys(data).length; i++) {
+        for(let j = 0; j < data[i].type.length; j++){
+            
+            massnahmen_type = data[i].type[j];
+
+            if(massnahmen_type == MASSNAHMEN_ART_PRIVATE_JSON.BUILDING){
+
+                this.privateMassnahmenSonstige.appendChild(createCheckbox(data[i], i, this.privateMassnahmenSonstige.childElementCount));
+
+            }else if(massnahmen_type == MASSNAHMEN_ART_PRIVATE_JSON.OUTSIDE){
+
+                this.privateMassnahmenAussenbereich.appendChild(createCheckbox(data[i], i, this.privateMassnahmenAussenbereich.childElementCount));
+
+            }else if(massnahmen_type == MASSNAHMEN_ART_PRIVATE_JSON.OTHER){
+
+                this.privateMassnahmenGebaude.appendChild(createCheckbox(data[i], i, this.privateMassnahmenGebaude.childElementCount));
+
+            }else if(massnahmen_type == MASSNAHMEN_ART_COMPANY_JSON.BUILDING){
+
+                this.companyMassnahmenGebaude.appendChild(createCheckbox(data[i], i, this.companyMassnahmenGebaude.childElementCount));
+
+            }else if(massnahmen_type == MASSNAHMEN_ART_COMPANY_JSON.OUTSIDE){
+
+                this.companyMassnahmenAussenbereich.appendChild(createCheckbox(data[i], i, this.companyMassnahmenAussenbereich.childElementCount));
+
+            }else if(massnahmen_type == MASSNAHMEN_ART_COMPANY_JSON.OTHER){
+
+                this.companyMassnahmenSonstige.appendChild(createCheckbox(data[i], i, this.companyMassnahmenSonstige.childElementCount));
+
+            }else{
+                console.log("Hier stimmt was nicht");
+            }
+        }
+    }   
+
+    addShowMoreButton(this.companyMassnahmenSonstige);
+    addShowMoreButton(this.companyMassnahmenAussenbereich);
+    addShowMoreButton(this.companyMassnahmenGebaude);
+    addShowMoreButton(this.privateMassnahmenSonstige);
+    addShowMoreButton(this.privateMassnahmenAussenbereich);
+    addShowMoreButton(this.privateMassnahmenGebaude);
+}
+
+function fillConstList(data) {
+    fillAllDivs(data);
     updateNavbarHeight();
-    addEventListenerForNewsExpansion();
 
     document.getElementById("customertype_private").addEventListener("click", function(){
-        uncheckAllCBs();
         if(!this.checked){
-            HideMassnahmen();
-            document.getElementById("massnahmen_private").style.visibility = "hidden";
             return;
         }
         removeCustomerError()
-        ShowMassnahmen();
-        loadPrivateMassnahmenHeader();
-        document.getElementById("massnahmen_company").style.visibility = "hidden";
-        document.getElementById("massnahmen_private").style.visibility = "visible";
-    });//ToDo make one function out of this
+        loadMassnahmenHeader(MASSNAHMEN_ART_PRIVATE);
+        updateMassnahmenToPrivate();
+        addEventListenerForShowMoreExpansion();
+    });
+
     document.getElementById("customertype_company").addEventListener("click", function(){
-        uncheckAllCBs();
         if(!this.checked){
-            HideMassnahmen();
-            document.getElementById("massnahmen_company").style.visibility = "hidden";
             return;
         }
         removeCustomerError()
-        ShowMassnahmen();
-        loadCompanyMassnahmenHeader();
-        document.getElementById("massnahmen_private").style.visibility = "hidden";
-        document.getElementById("massnahmen_company").style.visibility = "visible";
-        
+        loadMassnahmenHeader(MASSNAHMEN_ART_COMPANY);
+        updateMassnahmenToCompany();
+        addEventListenerForShowMoreExpansion();
     });
 }
 
@@ -100,39 +191,25 @@ function uncheckAllCBs(){
     }    
 }
 
-function HideMassnahmen(){
-    document.getElementById("cb_massnahmen").style.visibility = "hidden";
-}
-
-
-function ShowMassnahmen(){
-    document.getElementById("cb_massnahmen").style.visibility = "visible";
-}
-
-function loadCompanyMassnahmenHeader(){
-    document.getElementById("cb_massnahmen_typ_gebaeude_header_company").innerHTML = MASSNAHMEN_ART_COMPANY.BUILDING;
-    document.getElementById("cb_massnahmen_typ_aussenbereich_header_company").innerText = MASSNAHMEN_ART_COMPANY.OUTSIDE;
-    document.getElementById("cb_massnahmen_typ_sonstige_header_company").innerText = MASSNAHMEN_ART_COMPANY.OTHER;
-}
-
-function loadPrivateMassnahmenHeader(){
-    document.getElementById("cb_massnahmen_typ_gebaeude_header_private").innerHTML = MASSNAHMEN_ART_PRIVATE.BUILDING;
-    document.getElementById("cb_massnahmen_typ_aussenbereich_header_private").innerText = MASSNAHMEN_ART_PRIVATE.OUTSIDE;
-    document.getElementById("cb_massnahmen_typ_sonstige_header_private").innerText = MASSNAHMEN_ART_PRIVATE.OTHER;
+function loadMassnahmenHeader(massnahmen_art){
+    document.getElementById("cb_massnahmen_typ_gebaeude_header").innerHTML = massnahmen_art.BUILDING;
+    document.getElementById("cb_massnahmen_typ_aussenbereich_header").innerText = massnahmen_art.OUTSIDE;
+    document.getElementById("cb_massnahmen_typ_sonstige_header").innerText = massnahmen_art.OTHER;
 }
 
 function addShowMoreButton(div){
     var expandclick = document.createElement("a");
     expandclick.className = "collapsible_massnahmen";
-    expandclick.innerHTML = "Mehr anzeigen";
+    expandclick.innerHTML = SHOW_MORE;
     div.appendChild(expandclick);
 }
 
-function addEventListenerForNewsExpansion(){
+function addEventListenerForShowMoreExpansion(){
     var coll = document.getElementsByClassName("collapsible_massnahmen");
     var i;
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
+            console.log("click");
             this.classList.toggle("active");
             let cbs = getContentCheckboxes(this);
             for(let j = 0; j < cbs.length; j++){
@@ -168,9 +245,8 @@ function setDefaultValues(){
     .then(data => fillConstList(data));
 }
 
-function addCheckboxes(massnahme, index, massnahmen_type){    
+function createCheckbox(massnahme, index, childCount){
     // Create the inner div before appending to the body
-    let cb_element;
     var label = document.createElement("label")
     var checkbox = document.createElement("input");
 
@@ -184,26 +260,13 @@ function addCheckboxes(massnahme, index, massnahmen_type){
     
     label.appendChild(checkbox);
     label.appendChild(textContent);
-    // Then append the whole thing onto the body
-    if(massnahmen_type == MASSNAHMEN_ART_PRIVATE_JSON.BUILDING){
-        cb_element = document.getElementById("cb_massnahmen_typ_gebaeude_private");
-    }else if(massnahmen_type == MASSNAHMEN_ART_PRIVATE_JSON.OUTSIDE){
-        cb_element = document.getElementById("cb_massnahmen_typ_aussenbereich_private");
-    }else if(massnahmen_type == MASSNAHMEN_ART_PRIVATE_JSON.OTHER){
-        cb_element = document.getElementById("cb_massnahmen_typ_sonstige_private");
-    }else if(massnahmen_type == MASSNAHMEN_ART_COMPANY_JSON.BUILDING){
-        cb_element = document.getElementById("cb_massnahmen_typ_gebaeude_company");
-    }else if(massnahmen_type == MASSNAHMEN_ART_COMPANY_JSON.OUTSIDE){
-        cb_element = document.getElementById("cb_massnahmen_typ_aussenbereich_company");
-    }else if(massnahmen_type == MASSNAHMEN_ART_COMPANY_JSON.OTHER){
-        cb_element = document.getElementById("cb_massnahmen_typ_sonstige_company");
-    }
 
-    if(cb_element.childElementCount > 4){
+    if(childCount > 4){
         label.className += " content_massnahmen";
         label.style.display = "none";
     }
-    cb_element.appendChild(label);
+
+    return label;
 }
 
 function countTemp(element){
@@ -220,12 +283,9 @@ function countTemp(element){
 
 function getCheckedCategories(){
     let checkedMassnahmen = []
-    const cb_divs = [document.getElementById("cb_massnahmen_typ_gebaeude_private"), 
-        document.getElementById("cb_massnahmen_typ_aussenbereich_private"), 
-        document.getElementById("cb_massnahmen_typ_sonstige_private"), 
-        document.getElementById("cb_massnahmen_typ_gebaeude_company"), 
-        document.getElementById("cb_massnahmen_typ_aussenbereich_company"), 
-        document.getElementById("cb_massnahmen_typ_sonstige_company")];
+    const cb_divs = [document.getElementById("cb_massnahmen_typ_gebaeude"), 
+        document.getElementById("cb_massnahmen_typ_aussenbereich"), 
+        document.getElementById("cb_massnahmen_typ_sonstige")];
     
     let cb_div;
 

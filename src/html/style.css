@@ -1,5 +1,5 @@
 :root {
-  --navbar-height: 101px;
+  --navbar-height: 51px;
 }
 
 body {
@@ -10,9 +10,13 @@ body {
     line-height: 1.42em;
     color:#A7A1AE;
     background-color:#1F2739;
+    /*background-image: url("../pictures/background/random_house.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;*/
 }
 
-.flex{
+.container_customertype{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,15 +24,21 @@ body {
   /*width: 80%;  */
 }
 
+.container_userinput{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-around;
+  row-gap: 20px;
+  background-color: #1F2739;
+  width: auto;
+}
+
 .massnahmen {
   display: flex;
   align-items: baseline;
   flex-direction: row;
   column-gap: 10px;
-}
-
-#flex{
-  row-gap: 20px;
 }
   
 h1 {
@@ -58,11 +68,9 @@ h2 a {
 }
 
 h3 {
-  font: size 1.5em; 
-  font-weight: 200;
-  text-align: center;
+  font: size 1.9em; 
+  text-align: left;
   display: block;
-  line-height:1em;
   padding-bottom: 0.5em;
   /*color: #FB667A;*/
 }
@@ -71,10 +79,6 @@ h3 {
     color: red;
     font-size: large;
     font-weight: 750;
-}
-
-#cb_massnahmen {
-  visibility: hidden;
 }
 
  /* Style the button that is used to open and close the collapsible content */
@@ -133,6 +137,7 @@ h3 {
   font-size: 15px;
   height: 100%;
   margin-bottom: 0px;
+  padding-top: 0.5em;
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -151,7 +156,6 @@ h3 {
   align-items: baseline;
   flex-direction: column;
   align-content: space-between;
-
 }
 
 .label { 
@@ -161,7 +165,7 @@ h3 {
   width: 300px; 
 }​
 
-.customertype_box {
+.container_customertype {
   display: flex;
   align-items: baseline;
 }
@@ -308,4 +312,12 @@ h3 {
 .button-1:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+footer {
+  display: flex;
+  align-items: end;
+  padding: 1em 0;
+  justify-content: center;
+  background-color: rgb(128, 103, 71);
 }
